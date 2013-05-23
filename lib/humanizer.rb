@@ -28,7 +28,7 @@ module Humanizer
   private
   
   def humanizer_questions
-    @humanizer_questions ||= I18n.translate("humanizer.questions")
+    @humanizer_questions ||= I18n.translate("humanizer.questions").each{|q| q.stringify_keys!}
   end
 
   def humanizer_question_ids
